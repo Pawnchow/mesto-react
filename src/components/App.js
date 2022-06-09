@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import { useState } from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -42,10 +42,10 @@ function App() {
     <div className="page">
       <Header />
       <Main 
-      onEditAvatar={handleEditAvatarClick}
-      onEditProfile={handleEditProfileClick}
-      onAddPlace={handleAddPlaceClick}
-      onCardClick={handleCardClick}
+        onEditAvatar={handleEditAvatarClick}
+        onEditProfile={handleEditProfileClick}
+        onAddPlace={handleAddPlaceClick}
+        onCardClick={handleCardClick}
       />
       <Footer />
       <PopupWithForm
@@ -53,7 +53,6 @@ function App() {
         title="Редактировать профиль"
         onClose={closeAllPopups}
         isOpen={isEditProfilePopupOpen}
-        buttonText="Сохранить"
         onOverlayClick={handleOverlayClick}
       >
         <label className="popup__input-group">
@@ -127,12 +126,11 @@ function App() {
         </label>
       </PopupWithForm>
       <PopupWithForm
-      name="avatar-edit"
-      title="Обновить аватар"
-      onClose={closeAllPopups}
-      isOpen={isEditAvatarPopupOpen}
-      buttonText="Сохранить"
-      onOverlayClick={handleOverlayClick}
+        name="avatar-edit"
+        title="Обновить аватар"
+        onClose={closeAllPopups}
+        isOpen={isEditAvatarPopupOpen}
+        onOverlayClick={handleOverlayClick}
       >
         <label className="popup__input-group">
           <input
