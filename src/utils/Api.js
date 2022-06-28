@@ -78,6 +78,13 @@ class Api {
             headers: this._headers
         })
     }
+
+    changeLikeCardStatus(cardId, isLiked) {
+        return this._getResponse(`cards/likes/${cardId}`, {
+            method: `${!isLiked ? 'DELETE' : 'PUT'}`,
+            headers: this._headers
+        })
+    }
 }
 
 const api = new Api({
