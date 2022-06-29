@@ -8,4 +8,8 @@
 * JavaScript
 * React
 
+## В планах:
+* Валидация форм
+* Индикатор загрузки
+
 [Ссылка на проект](https://pawnchow.github.io/mesto-react/)

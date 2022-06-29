@@ -22,8 +22,8 @@ function AddPlacePopup({ isOpen, onClose, onOverlayClick, onAddPlace }) {
   }
 
   useEffect(() => {
-    setLink(null);
-    setName(null);
+    setLink('');
+    setName('');
   }, [isOpen])
 
   return (
