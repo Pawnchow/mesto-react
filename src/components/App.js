@@ -56,11 +56,9 @@ function App() {
     setSelectedCard(card);
   };
 
-  function handleOverlayClick(evt) {
-    if (evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close-button')) {
+  function handleOverlayClick() {
       closeAllPopups();
     }
-  };
 
   function handleUpdateUser({ name, about }) {
     api.setUserInfo(name, about)

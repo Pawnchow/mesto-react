@@ -14,7 +14,7 @@ function PopupWithForm( {buttonText="Сохранить", onClose, name, title, 
 
     return (
         <div className={`popup popup_${name} ${isOpen && 'popup_opened'}`} onMouseDown={onOverlayClick}>
-            <div className="popup__container">
+            <div className="popup__container" onMouseDown={e => e.stopPropagation()}>
                 <button className="popup__close-button" type="button" aria-label="Закрыть" onClick={onClose}></button>
                 <form className={`popup__form popup__form_${name}`} name ={name} onSubmit={onSubmit} noValidate>
                     <h2 className="popup__title">{title}</h2>
